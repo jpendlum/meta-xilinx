@@ -7,4 +7,5 @@ PR = "r1"
 # github.com/Xilinx/linux-xlnx.git  
 LINUX_VERSION = "3.10"
 SRCREV = "7f5d01bf5fbac64ac42781d061582fa51dd14a37"
+KBRANCH = "master-next"
 
