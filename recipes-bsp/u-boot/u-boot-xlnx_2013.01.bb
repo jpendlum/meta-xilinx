@@ -3,8 +3,11 @@
 # repo during parse
 # Corresponds to github.com/Xilinx tag V14.5
 SRCREV = "20a6cdd301941b97961c9c5425b5fbb771321aac"
-PV = "v2013.01${XILINX_EXTENSION}+git${SRCPV}"
+PV = "v2013.01${XILINX_EXTENSION}"
 PR = "r1"
+
+SRC_URI_append_zedboard-zynq7 = "file://fsbl.elf.bz2"
+ZYNQ_FSBL = "${WORKDIR}/fsbl.elf"
 
 include u-boot-xlnx.inc
 
