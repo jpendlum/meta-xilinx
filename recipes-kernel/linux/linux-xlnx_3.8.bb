@@ -1,13 +1,11 @@
+KBRANCH = "xlnx_3.8"
 # See include file for common information
 include linux-xlnx.inc
 
 PR = "r1"
 
-# Kernel version and SRCREV correspond to: github.com/Xilinx v14.5 tag
+# Kernel version and SRCREV correspond to: github.com/Xilinx xlnx_3.8 branch
 LINUX_VERSION = "3.8"
-SRCREV = "6a0bedad60e2bca8d9b50bf81b9895e29e31a6d7"
+SRCREV = "f4ff79d44a966ebea6229213816d17eb472b303e"
 
-# MicroBlaze patches
-SRC_URI_append_microblaze = " \
-		file://microblaze-patches_v3.8.scc \
-		"
+SRC_URI_append += "file://libtraceevent-Remove-hard-coded-include-to-usr-local.patch"
