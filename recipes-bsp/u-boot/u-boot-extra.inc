@@ -13,7 +13,11 @@ do_deploy_append() {
 	install ${S}/${SRC_ELF} ${DEPLOYDIR}/${DEST_ELF}
 
 	if [ -e ${S}/BOOT.BIN ] ; then
-		install ${S}/BOOT.BIN ${DEPLOYDIR}/BOOT.BIN-${MACHINE}
+		install ${S}/BOOT.BIN ${DEPLOYDIR}/BOOT-${MACHINE}.BIN
+	fi
+
+	if [ -e ${S}/uEnv.txt ] ; then
+		install ${S}/uEnv.txt ${DEPLOYDIR}/uEnv-${MACHINE}.txt
 	fi
 
 	cd ${DEPLOYDIR}
