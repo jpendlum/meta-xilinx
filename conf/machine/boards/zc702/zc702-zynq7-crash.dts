@@ -1,5 +1,5 @@
 /*
- * Zedboard DTS file header for sdcard/mmc partition 2 boot.
+ * ZC702 DTS file header for sdcard/mmc partition 2 boot.
  */
 
 /dts-v1/;
@@ -10,8 +10,8 @@
 	} ;
 
 	ps7_axi_interconnect_0: amba@0 {
-		user_peripheral@40000000 {
-			compatible = "gnuradio,user_peripheral";
+		crash@40000000 {
+			compatible = "gnuradio,crash";
 			reg = <0x40000000 0x20000>;
 			interrupts = < 0 59 1 >;
 			interrupt-parent = <&ps7_scugic_0>;
