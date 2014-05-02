@@ -22,6 +22,10 @@ do_bootbin() {
 		echo "}" >> bootimage.bif
 		bootgen -image bootimage.bif -o i ${S}/BOOT.BIN
 	fi
+	if [ -e ${ZYNQ_UENV} ] ; then
+		rm -f ${S}/uEnv.txt
+		cp ${ZYNQ_UENV} ${S}/uEnv.txt
+	fi
 }
 
 include u-boot-extra.inc
